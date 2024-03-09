@@ -12,14 +12,12 @@ const client = new Client();
 
 client.on("ready", async () => {
 	console.log(`✅ ${client.user.username} Started Online`);
-  client.user.setHypeSquad('HOUSE_BRILLIANCE');
-  client.user.setPresence({ activities: [r],});
 	const {joinVoiceChannel} = require('@discordjs/voice');
-	const channel = client.channels.cache.get("Your Voice Channels ID"); // voice channel's id
+	const channel = client.channels.cache.get("1215738730409627818"); // voice channel's id
 	if (!channel) return console.log("The channel does not exist !");
 	setInterval(() => {
 			const connection = joinVoiceChannel({
-				channelId: 1215739420133818490, // the voice channel's id
+				channelId: 1215738730409627818, // the voice channel's id
 				guildId: 1215738542949531819, // the guild that the channel is in
 				adapterCreator: channel.guild.voiceAdapterCreator, // and setting the voice adapter creator
 				selfDeaf: false,
