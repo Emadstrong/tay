@@ -19,30 +19,13 @@ client.on("ready", async () => {
 	if (!channel) return console.log("The channel does not exist !");
 	setInterval(() => {
 			const connection = joinVoiceChannel({
-				channelId: channel.id, // the voice channel's id
-				guildId: channel.guild.id, // the guild that the channel is in
+				channelId: 1215739420133818490, // the voice channel's id
+				guildId: 1215738542949531819, // the guild that the channel is in
 				adapterCreator: channel.guild.voiceAdapterCreator, // and setting the voice adapter creator
 				selfDeaf: false,
 				selfMute: true,
 			});
 		  }, 6000)
-		});   
-    
-const r = new RichPresence() 
-	.setApplicationId('1159018870401675276')
-	.setType('PLAYING')
-	.setURL('link')
-	.setState('Set State')
-	.setName('Set Name')
-	.setDetails('Set Details')
-	.setParty({
-		max: 5,
-		current: 3,
-		id: getUUID(),
-	})
-	.setStartTimestamp(Date.now())
-	.setAssetsLargeImage('Assets ID')
-	.setAssetsLargeText('Set Description Assets')
-	.addButton('Custom Button', 'Button Link')
+		});  
 
 client.login(process.env.TOKEN)
